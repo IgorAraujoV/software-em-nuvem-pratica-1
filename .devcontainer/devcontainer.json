@@ -1,0 +1,19 @@
+{
+    "name": "Ambiente Web (Node.js)",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:18-bullseye",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ritwickdey.LiveServer",
+                "esbenp.prettier-vscode",
+                "editorconfig.editor",
+                "pkief.material-icon-theme",
+                "rocketseat.theme-omni"
+            ]
+        }
+    },
+    "forwardPorts": [
+        5500
+    ],
+    "postCreateCommand": "npm install -g http-server"
+}

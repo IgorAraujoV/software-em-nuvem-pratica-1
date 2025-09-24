@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>Lista de Tarefas</h1>
+      <p>Organize seu dia adicionando, concluindo e removendo tarefas.</p>
+    </header>
+
+    <form id="task-form" class="task-form" autocomplete="off">
+      <label class="sr-only" for="task-input">Nova tarefa</label>
+      <input id="task-input" name="task" type="text" placeholder="Digite uma nova tarefa" required>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <section class="task-list" aria-live="polite">
+      <h2 class="sr-only">Tarefas</h2>
+      <ul id="tasks"></ul>
+      <p id="empty-state" class="empty">Nenhuma tarefa adicionada ainda.</p>
+    </section>
+  </main>
+
+  <template id="task-template">
+    <li class="task" data-task-id="">
+      <label>
+        <input type="checkbox" class="task__checkbox">
+        <span class="task__title"></span>
+      </label>
+      <button type="button" class="task__delete" aria-label="Remover tarefa">&times;</button>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
